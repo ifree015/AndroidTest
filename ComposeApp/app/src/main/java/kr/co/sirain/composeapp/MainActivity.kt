@@ -32,17 +32,17 @@ import kr.co.sirain.composeapp.ui.theme.ComposeAppTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            ComposeAppTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize()
+        enableEdgeToEdge() // 1
+        setContent { // 2
+            ComposeAppTheme { // 3
+                Scaffold( // 4
+                    modifier = Modifier.fillMaxSize() //5
                 ) { innerPadding ->
                     Surface(
                         modifier = Modifier.padding(innerPadding),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        ComposeScreen()
+                        ComposeScreen() // 6
                     }
                 }
             }
@@ -73,7 +73,7 @@ fun ComposeScreen() {
         )
 
         Text(
-            style = MaterialTheme.typography.headlineMedium,
+            style = MaterialTheme.typography.headlineLarge, // M2 h4(34px, ##)
             text = "${sliderPosition.toInt().toString()}sp"
         )
     }
@@ -102,7 +102,7 @@ fun ComposeSlider(sliderPosition: Float, onPositionChange: (Float) -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-fun ComposePreview() {
+fun ComposePreview() { // 7
     ComposeAppTheme {
         ComposeScreen()
     }
