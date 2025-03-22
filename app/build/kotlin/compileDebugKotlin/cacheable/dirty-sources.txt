@@ -1,0 +1,4 @@
+C:\Repositories\AndroidTest\app\src\main\java\kr\co\sirain\slopapiapp\ui\theme\Type.kt
+C:\Repositories\AndroidTest\app\src\main\java\kr\co\sirain\slopapiapp\ui\theme\Theme.kt
+C:\Repositories\AndroidTest\app\src\main\java\kr\co\sirain\slopapiapp\ui\theme\Color.kt
+C:\Repositories\AndroidTest\app\src\main\java\kr\co\sirain\slopapiapp\MainActivity.kt
