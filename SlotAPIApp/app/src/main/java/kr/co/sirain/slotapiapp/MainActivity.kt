@@ -117,13 +117,22 @@ fun ScreenContent(
 }
 
 @Composable
+fun TitleImage(drawing: Int) {
+    Image(
+        painter = painterResource(drawing),
+        contentDescription = "title image",
+        colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary)
+    )
+}
+
+@Composable
 fun CheckBoxes(
     linearSelected: Boolean,
     imageSelected: Boolean,
     onTitleClick: (Boolean) -> Unit,
     onLinearClick: (Boolean) -> Unit
 ) {
-    Row(Modifier.padding(20.dp)) {
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(20.dp)) {
         Checkbox(
             checked = imageSelected,
             onCheckedChange = onTitleClick
@@ -136,15 +145,6 @@ fun CheckBoxes(
         )
         Text("Linear Progress")
     }
-}
-
-@Composable
-fun TitleImage(drawing: Int) {
-    Image(
-        painter = painterResource(drawing),
-        colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
-        contentDescription = "title image"
-    )
 }
 
 @Preview(showSystemUi = true)
