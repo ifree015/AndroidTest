@@ -147,6 +147,23 @@ fun CheckBoxes(
     }
 }
 
+//@Preview(showSystemUi = true)
+//@Composable
+//fun SimpleRow() {
+//    Row(
+//        modifier = Modifier
+//            .fillMaxWidth()
+//            .padding(16.dp)
+//            .background(Color.LightGray),
+//        horizontalArrangement = Arrangement.SpaceEvenly, // 요소들 사이에 균등한 간격
+//        verticalAlignment = Alignment.CenterVertically // 세로 방향 중앙 정렬
+//    ) {
+//        Text(text = "Apple")
+//        Text(text = "Banana")
+//        Text(text = "Orange")
+//    }
+//}
+
 @Preview(showSystemUi = true)
 @Composable
 fun ComposePreview() {
